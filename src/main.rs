@@ -4,12 +4,12 @@ use std::io::{BufRead, BufReader};
 use std::path::Path;
 
 fn main() {
-    let file = Path::new("poem.txt");
+    let file = Path::new("text.txt");
     let std_handle = Handle::stdout().unwrap();
     let handle = Handle::from_path(&file).unwrap();
 
     if std_handle == handle {
-        println!("stdout is the same as poem.txt");
+        println!("stdout is the same as text.txt");
     } else {
         let file = File::open(file).unwrap();
         let reader = BufReader::new(file);

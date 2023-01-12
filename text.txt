@@ -1,0 +1,1 @@
+stdout is the same as text.txt
